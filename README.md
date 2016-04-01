@@ -142,7 +142,7 @@ const todos = (state = [], action) => {
 export default todos
 ```
 
-In Alt, state is just defined as the properties of the class in constructor. The action handlers is just the methods of the class. It is very straight forward and pretty synx comparing to the switch statement of Reducer in Redux.
+In Alt, state is just defined as the properties of the class in constructor. The action handlers is just the methods of the class. It is very straight forward and nicer synx than the switch statement of Reducer in Redux. In Alt the convention is to just implement a function with name "onAddTodo" to handle the action "addTodo".
 
 
 ## Container/Provider
@@ -193,25 +193,19 @@ render(
 
 ```javascript
 import React from 'react'
-import AltContainer from 'alt-container'
-import TodoActions from '../stores/TodoActions.js'
-import TodoStore from '../stores/TodoStore.js'
 import Footer from './Footer'
-import AddTodo from './AddTodo'
-import TodoList from './TodoList'
+import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
 
 const App = () => (
   <div>
-    <AltContainer stores = {{store: TodoStore}} actions = {{actions: TodoActions}}>
-      <AddTodo />
-      <TodoList />
-      <Footer />
-    </AltContainer>
+    <AddTodo />
+    <VisibleTodoList />
+    <Footer />
   </div>
 )
 
 export default App
-
 ```
 
 The AltContainer looks similar to Redux's Provider. However that is all you need to do in Alt to wire views, actions, and store. In Redux you have to many more manual wirings.
