@@ -144,6 +144,28 @@ export default todos
 
 In Alt, state is just defined as the properties of the class in constructor. The action handlers is just the methods of the class. It is very straight forward and nicer synx than the switch statement of Reducer in Redux. In Alt the convention is to just implement a function with name "onAddTodo" to handle the action "addTodo".
 
+Another important note about Reducer is that it forces the state to be immutable and a copy of the state must be returned from the reducer. There will be performance penalties when the state is large such as a very long array. In Array you can either make a copy of the state in action hander or you can change the state object in place as I did
+
+in Alt store
+```javascript
+  onAddTodo(text){
+    this.todos.push({
+      id: this.nextTodoId++,
+      text: text,
+      completed: false
+    })
+  }
+```
+
+vs Redux's
+
+```javascript
+  case 'ADD_TODO':
+    return [
+      ...state,
+      todo(undefined, action)
+    ]
+```
 
 ## Container/Provider
 
