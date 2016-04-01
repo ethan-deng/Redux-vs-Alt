@@ -241,6 +241,7 @@ const FilterLink = connect(
 )(Link)
 
 export default FilterLink
+```
 
 ```javascript
 import { connect } from 'react-redux'
@@ -281,7 +282,7 @@ export default VisibleTodoList
 
 ```
 
-As you can see in Redux, you have call "connect", create "mapStateToProps", "mapDispatchToProps" to wire views to actions and stores. In Alt, all you have to do is
+As you can see in Redux, you have to call "connect", create "mapStateToProps", "mapDispatchToProps" to wire views to actions and stores. In Alt, all you have to do is
 
 ```
 <AltContainer stores = {{store: TodoStore}} actions = {{actions: TodoActions}}>
