@@ -208,9 +208,9 @@ const App = () => (
 export default App
 ```
 
-The AltContainer looks similar to Redux's Provider. However that is all you need to do in Alt to wire views, actions, and store. In Redux you have to many more manual wirings.
+The AltContainer looks similar to Redux's Provider. However that is all you need to do in Alt to wire views, actions, and stores. In Redux you have to do many more manual wirings.
 
-Redux wirings
+#### Redux wirings
 
 ```javascript
 AddTodo = connect()(AddTodo)
@@ -287,7 +287,7 @@ As you can see in Redux, you have call "connect", create "mapStateToProps", "map
 <AltContainer stores = {{store: TodoStore}} actions = {{actions: TodoActions}}>
 ```
 
-Alt takes care of wiring in the background.
+Alt takes care of all the wirings in the background.
 
 ## View and Dispatch
 
@@ -357,7 +357,7 @@ AddTodo = connect()(AddTodo)
 export default AddTodo
 ```
 
-Alt and Redux is similar in dispatching actions from view but Alt is more straight by using a function call
+Alt and Redux is similar in dispatching actions from views but Alt is more straight by using a function call
 ```
 props.actions.addTodo(input.value)
 ```
