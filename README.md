@@ -85,11 +85,7 @@ class TodoStore {
   }
 
   onToggleTodo(id){
-    for (let i=0; i < this.todos.length; i++){
-      if (i === id){
-        this.todos[i].completed = !this.todos[i].completed;
-      }
-    }
+    this.todos[id].completed = !this.todos[id].completed;
   }
 
   onSetVisibilityFilter(filter){
