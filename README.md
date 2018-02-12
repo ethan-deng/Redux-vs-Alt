@@ -380,7 +380,7 @@ AddTodo = connect()(AddTodo)
 export default AddTodo
 ```
 
-Alt and Redux is similar in dispatching actions from views but Alt is more straight by using a function call
+Alt and Redux is similar in dispatching actions from views but Alt is more straight forward by using a function call
 ```
 props.actions.addTodo(input.value)
 ```
