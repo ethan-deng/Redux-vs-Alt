@@ -1,7 +1,7 @@
 # Redux-vs-Alt
 A line by line comparison of Redux and Alt's implementation of Dan Abramov's Todo list example
 
-Redux is getting hot! The trend can be seen from this [Redex vs Alt NPM trend chart](http://www.npmtrends.com/redux-vs-alt). However the framework of [Alt + AltContainer](http://alt.js.org/) is a much more concise and much easier to understand than Redux.
+Redux is getting hot! The trend can be seen from this [Redux vs Alt NPM trend chart](http://www.npmtrends.com/redux-vs-alt). However the framework of [Alt + AltContainer](http://alt.js.org/) is a much more concise and much easier to understand than Redux.
 
 It seems Alt is not getting as much attention as Redux. There may be a few reasons for this. First, the best coding approach of Alt + AltContainer is not well documented. Second, even though Alt came out earlier than Redux but AltContainer is a few months later than Redux. Third, Dan Abramov the author of both React Hot Loader and Redux is a better known figure.
 
