@@ -21,17 +21,7 @@ open http://localhost:3000/
 ```javascript
 import alt from '../alt'
 
-class TodoActions {
-  constructor() {
-    this.generateActions(
-      'addTodo',
-      'toggleTodo',
-      'setVisibilityFilter'
-    )
-  }
-}
-
-module.exports = alt.createActions(TodoActions)
+module.exports =  alt.generateActions('addTodo', 'toggleTodo', 'setVisibilityFilter');
 ```
 
 ### Redux
